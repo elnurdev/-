@@ -1,0 +1,147 @@
+body {
+    font-family: 'Proxima Nova', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1169px;
+    margin: 0 auto;
+}
+
+#last-blog {
+    margin: 0;
+}
+
+.fons {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#menu__toggle {
+    opacity: 0;
+  }
+  
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+  }
+  
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 17px;
+    left: 18px;
+    width: 20px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transition-duration: .5s;
+  }
+
+  .menu__btn > span::before {
+    content: '';
+    top: -6px;
+  }
+
+  .menu__btn > span::after {
+    content: '';
+    top: 6px;
+  }
+  
+  .menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 50px 0 0 0;
+    list-style: none;
+    background: #F7EBE5;
+    z-index: 999;
+    transition-duration: 1s;
+  }
+  
+  .menu__item {
+    display: block;
+    padding: 0 0 14px 0;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: .25s;
+    color: rgba(0, 0, 0, 0.79);
+  }
+
+  .menu__title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    justify-content: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #201414;
+  }
+
+  .percent {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    padding: 3px 4px 1px 4px;
+    margin: 0 0 0 7px;
+    border-radius: 50%;
+    background: #E7426A;
+    color: #fff;
+  }
+
+  .menu-line {
+    width: 100%;
+    margin: 11px 0 11px 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  @media only screen and (max-width: 576px) {
+    .container {
+      max-width: 288px;
+      margin: 0 auto;
+    }
+
+    .header-item__media {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
